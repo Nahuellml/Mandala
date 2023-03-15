@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* .contenedor {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: rgb(0, 0, 0);
+} */
+
+.box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: transparent;
+}
+
+.box::before, .box::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
+  background-size: 300%;
+  animation: border 12s linear infinite;
+}
+
+.box::after {
+  filter: blur(30px);
+}
+
+
+@keyframes border {
+  0%, 100% {
+    background-position: 0 0;
+
+  }
+  50% {
+    background-position: 300%;
+  }
+}
+
+
+/* .glow {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: transparent;
+}
+
+.blur::before, .blur::after {
+  content:"";
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  background-size: 400%;
+  background: linear-gradient(45deg, yellow, red, orange, green, blue, purple,yellow, red, orange, green, blue, purple);
+  animation: animate 15s linear infinite;
+  
+}
+
+.blur::after {
+  filter: blur(40px);
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 400% 0%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+} */
+
+
+
+
+.imagen-externa {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.imagen-interna {
+  position: absolute;
+  top: 225px;
+  left: 241px;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 340px;
+}
